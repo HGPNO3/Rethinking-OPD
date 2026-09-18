@@ -1,0 +1,95 @@
+{
+  "schema_version": "two_teacher_reference_online_v2",
+  "models": {
+    "student": "Qwen/Qwen3-4B",
+    "teacher": "Qwen/Qwen3-14B",
+    "partner": "Qwen/Qwen3-4B",
+    "IG": "Qwen/Qwen3-4B"
+  },
+  "temperature": 0.7,
+  "thinking": false,
+  "context": 40960,
+  "context_source": "actualQwen3configmax_position_embeddings; notSotopiaofficialunifiedlimit",
+  "generation_cap": "remainingmodelcontext; truncationrecorded",
+  "loss": "sampled_reverse_kl_original_student_tokens",
+  "specialties": [
+    "expression",
+    "turn"
+  ],
+  "selection": "positive_action_ig_per_token_v1_20260916",
+  "seed": 20260915,
+  "prompt_protocol": "official_user_prompt_action_instance_clarifier_v2",
+  "scope": "HG20260918 cumulative3000 continuation: immutable parent1000 plus2000 fresh usedOPD nodes; identical scientific settings and optimizer lineage. Evaluation separately bound.",
+  "target_nodes": 3000,
+  "teacher_candidates_per_specialty": 1,
+  "partner_samples_per_unique_action": 1,
+  "training_partner_policy": "frozen_within_batch_refresh_between_batches",
+  "train_role": "A",
+  "batch_dialogues": 16,
+  "acceptance_dialogues": 2,
+  "concurrency": 8,
+  "max_batches": 100,
+  "initial_snapshot_id": "Qwen3-4B:6dc0981b8829fead746441f68f38f24c5ca4a3a66351f652c26c6df0efc43ab2",
+  "goal_instruction": "Assess whether the target role's social goal has been achieved using only their visible interaction. State the goal outcome. Do not infer private information about the other role.",
+  "optimizer": {
+    "implementation": "LoRA",
+    "r": 32,
+    "alpha": 64,
+    "dropout": 0,
+    "target": "all-linear",
+    "lr": 1e-05,
+    "AdamW_betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0,
+    "clip_norm": 1,
+    "updates_per_batch": 1,
+    "optimizer_resume": true
+  },
+  "acceptance": {
+    "batch_count": 2,
+    "exclude_from_quota": true,
+    "checkpoint_reload_max_error": 1e-05,
+    "cross_engine_mean_abs_max": 0.1
+  },
+  "adapted_student_execution": {
+    "enforce_eager": true,
+    "async_scheduling": false,
+    "reason": "Prompt-logprob CUDA error recurred on legacy runner; disable chunked prefill and prefix caching, lower concurrent sequences and reserve scoring memory",
+    "use_v2_model_runner": false,
+    "max_num_seqs": 4,
+    "max_num_batched_tokens": 40960,
+    "gpu_memory_utilization": 0.8,
+    "prefix_caching": false,
+    "chunked_prefill": false
+  },
+  "ig_target_mode": "verbatim_goal",
+  "candidate_teacher_context": "visible_history_and_original_student_action",
+  "opd_teacher_context": "selected_reference_without_full_original_draft",
+  "reference_prompt_version": "two_teacher_reference_verbatim_goal_positive_ig_v1_20260917",
+  "reference_prompt_binding": "3520e812a6aebffb2917b7397974100be2eb6a4ab78d7caeab756a7f4f1fd5af",
+  "teacher_files_sha256": {
+    "config.json": "e73c3664ca09b10a673fef0c22e8a6b456201d49bd4713c9691f775720e8857a",
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "generation_config.json": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+    "model.safetensors.index.json": "62d7ad35757bae5e7baa452cb1483178b7daa50e869e923226b8da10871f7ebc",
+    "model-00001-of-00008.safetensors": "e942bdbdf08857d16a8fef7d1dae9fceabeb4e84def6043485fe2f6f085dab0e",
+    "model-00002-of-00008.safetensors": "f7c9c6eee628f5ad831d2d1d292e120505e5fcadeb38f88b4d3c4cb86306ccf9",
+    "model-00003-of-00008.safetensors": "dfb8c5df9404b41ad6ae74e8b6b367135f017b4467b884cf71b17c71954f18a9",
+    "model-00004-of-00008.safetensors": "eab286fec759e3e59ab228621aefa0fef14ed56039e06f959e67257d5af7604d",
+    "model-00005-of-00008.safetensors": "97f0dc2992e59da95c466eff6f4fd0c8335843bbc36ed5c913a6f5150748c0e6",
+    "model-00006-of-00008.safetensors": "9e8e76a013cd5e253865b792991e0b410f869b136b3c500079b531b09198e99e",
+    "model-00007-of-00008.safetensors": "0aee70ee6e91dc00d818804fb47f124d13ee4ad5b4a64553e09dbf9391cd5750",
+    "model-00008-of-00008.safetensors": "0d6b92296e326d39bbbaeb32c3ec454ac606da843d4c8ffa8edf010b62b8c9e0"
+  },
+  "runtime_note": "Persistent frozen teacher on separate host; same-host TP2 for27B; learner uses dedicated singleGPU and stops its server for HF update. No quantization.",
+  "review_metadata": {
+    "source": "outputs/dual_3000_20260918/prepared_qwen3/config.json",
+    "source_sha256": "6fd9257741850236986bbe74bd7f86a124b75ab7e6714ed3d215bfc57b42217d",
+    "status": "review snapshot, not authorization for a new run",
+    "omitted": "host paths, network endpoints, historical approval and checkpoint bindings"
+  }
+}
