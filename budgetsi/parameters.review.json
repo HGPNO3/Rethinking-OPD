@@ -1,0 +1,64 @@
+{
+  "purpose": "参数审核表，不是可运行的 Hydra 配置；没有训练代码读取本文件",
+  "status": "review_only_not_approved_for_new_run",
+  "upstream_pin": "ac26e38d6f1572eb027597b48a9f4e01f6915ef8",
+  "previous_budgetsi_source": {
+    "commit": "a98426823a7b64f412e1b15d3f84d6cdd42dd9f9",
+    "path": "budgetsi/configs/qwen3.json",
+    "scope": "既有 Qwen3 运行参数；不是 OPD 迁移验证结果"
+  },
+  "parameters": {
+    "learning_rate": {
+      "upstream": 1e-06,
+      "previous_budgetsi": 1e-05,
+      "opd_adaptation_final": null,
+      "reason": "未证明原来的十倍学习率适合 OPD；先审核，再确定基线与对照",
+      "source": "on_policy_distillation.sh:187"
+    },
+    "weight_decay": {
+      "upstream": 0.01,
+      "previous_budgetsi": 0,
+      "opd_adaptation_final": null,
+      "reason": "优化器行为不同，不能静默继承或覆盖；需明确选择",
+      "source": "verl/verl/workers/config/optimizer.py:42"
+    },
+    "lora_rank": {
+      "upstream": 0,
+      "previous_budgetsi": 32,
+      "opd_adaptation_final": null,
+      "reason": "上游默认不启用 LoRA；启用需要检查训练参数与保存恢复",
+      "source": "verl/verl/trainer/config/model/hf_model.yaml:43"
+    },
+    "lora_alpha": {
+      "upstream": 16,
+      "previous_budgetsi": 64,
+      "opd_adaptation_final": null,
+      "reason": "上游 rank=0 时 alpha 不生效；不能孤立比较数值",
+      "source": "verl/verl/trainer/config/model/hf_model.yaml:46"
+    },
+    "generation_temperature": {
+      "upstream": 1.0,
+      "previous_budgetsi": 0.7,
+      "opd_adaptation_final": 0.7,
+      "status": "existing_protocol_requirement_not_new_tuning",
+      "reason": "保留已确认的行为采样设置；训练原始概率温度为1.0，二者的分离需要第二份提交的代码适配",
+      "source": "on_policy_distillation.sh:57"
+    },
+    "batch": {
+      "upstream_configured_mini_batch_prompts": 64,
+      "upstream_responses_per_prompt": 4,
+      "previous_budgetsi_dialogues_per_collection": 16,
+      "opd_adaptation_final_nodes": "B = 本批实际入选行动数",
+      "reason": "prompt、完整对话、入选行动不是同一单位，不能直接把64改成16",
+      "source": "on_policy_distillation.sh:56,60; budgetsi/adapter.py in method commit"
+    },
+    "length": {
+      "upstream_prompt_cap": 1024,
+      "upstream_response_cap": 7168,
+      "previous_budgetsi_service_context": 40960,
+      "opd_adaptation_final": null,
+      "reason": "服务上下文容量不是任务回复上限；需结合长度与截断统计确定",
+      "source": "on_policy_distillation.sh:52-55"
+    }
+  }
+}
