@@ -1,3 +1,5 @@
+> **BudgetSI review fork:** Start with [parameter comparison and method migration](budgetsi/README.md). The original upstream documentation follows.
+
 ﻿<div align="center">
 
 # Rethinking On-Policy Distillation of Large Language Models:<br>Phenomenology, Mechanism, and Recipe

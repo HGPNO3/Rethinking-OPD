@@ -1,0 +1,215 @@
+{
+  "status": "byte-for-byte source export; not a verl trainer rewrite",
+  "files": [
+    {
+      "destination": "method/runner.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/runner.py",
+      "source_sha256": "ce01924e9f958ebb1fb9ca1bff9f237583f0564abbf5a35d1ddfc2c9e20aa29c",
+      "copied_sha256": "ce01924e9f958ebb1fb9ca1bff9f237583f0564abbf5a35d1ddfc2c9e20aa29c",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "method/test_train.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/test_train.py",
+      "source_sha256": "8afb3e219ce5b3daf4a7f74dbf91b133fda5e6c16fae5426f63238d9417bb16f",
+      "copied_sha256": "8afb3e219ce5b3daf4a7f74dbf91b133fda5e6c16fae5426f63238d9417bb16f",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "method/update_batch.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/update_batch.py",
+      "source_sha256": "2caa85f79120a3b9d48381220641505431710d2ea158d5a96c91a7596311475d",
+      "copied_sha256": "2caa85f79120a3b9d48381220641505431710d2ea158d5a96c91a7596311475d",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "method/adapter.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/adapter.py",
+      "source_sha256": "0af8c7dfd0cb7d201cc7279ab92ceee8f5bb339173f2f2cd0b153f123909f8b5",
+      "copied_sha256": "0af8c7dfd0cb7d201cc7279ab92ceee8f5bb339173f2f2cd0b153f123909f8b5",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "method/smoke_api.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/smoke_api.py",
+      "source_sha256": "142178602f23af24a0f4f19c105c2777bafd3aafc4edf674c7c9e6ad1340690b",
+      "copied_sha256": "142178602f23af24a0f4f19c105c2777bafd3aafc4edf674c7c9e6ad1340690b",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "method/test_reference_opd.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/test_reference_opd.py",
+      "source_sha256": "1a81fd57c90e1ed6889b546b5c5fa1250815b6575bbcc84512b80594f4b80831",
+      "copied_sha256": "1a81fd57c90e1ed6889b546b5c5fa1250815b6575bbcc84512b80594f4b80831",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "method/update_batch_qwen35.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/update_batch_qwen35.py",
+      "source_sha256": "104622503c33f418d5c42fec82e0855017bb52e1a0384ee1ff9bd092cf175b6a",
+      "copied_sha256": "104622503c33f418d5c42fec82e0855017bb52e1a0384ee1ff9bd092cf175b6a",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "method/test_runner.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/test_runner.py",
+      "source_sha256": "c01d6fd28558f4b54b13683d8b0876eb332132b4e1e40dce0d8f073363e8a82b",
+      "copied_sha256": "c01d6fd28558f4b54b13683d8b0876eb332132b4e1e40dce0d8f073363e8a82b",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "method/token_contract.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/token_contract.py",
+      "source_sha256": "5e9ebbb9fe30f65d815ce9a12a654d0a6ddc9326be827c1c0188c4d697871088",
+      "copied_sha256": "5e9ebbb9fe30f65d815ce9a12a654d0a6ddc9326be827c1c0188c4d697871088",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "method/protocol_gate.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/protocol_gate.py",
+      "source_sha256": "e989005febe8f84dd2f07433f5ec1b9df293106847d8ddcd68aae4319f82aec9",
+      "copied_sha256": "e989005febe8f84dd2f07433f5ec1b9df293106847d8ddcd68aae4319f82aec9",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen3/continuation/serve_teacher.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/serve_teacher.py",
+      "source_sha256": "a8c75e37e65899b7a29d32fbcde50de59636b76b4450950a98270c27e081012d",
+      "copied_sha256": "a8c75e37e65899b7a29d32fbcde50de59636b76b4450950a98270c27e081012d",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen3/continuation/continuation.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/continuation.py",
+      "source_sha256": "36bd4ca88a77d28ef2f14b7c362598d24f5643f8cdae820e6b65f2c9e57dbaf5",
+      "copied_sha256": "36bd4ca88a77d28ef2f14b7c362598d24f5643f8cdae820e6b65f2c9e57dbaf5",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen3/continuation/train.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/train.py",
+      "source_sha256": "fc400aa25b8fefe9c905ab204d27fde785338c51e4886dfaed8b2f981efca6d8",
+      "copied_sha256": "fc400aa25b8fefe9c905ab204d27fde785338c51e4886dfaed8b2f981efca6d8",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen3/fresh/serve_teacher.py",
+      "source": "outputs/dual_1000_20260917/snapshot_qwen3/serve_teacher.py",
+      "source_sha256": "a8c75e37e65899b7a29d32fbcde50de59636b76b4450950a98270c27e081012d",
+      "copied_sha256": "a8c75e37e65899b7a29d32fbcde50de59636b76b4450950a98270c27e081012d",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen3/fresh/train.py",
+      "source": "outputs/dual_1000_20260917/snapshot_qwen3/train.py",
+      "source_sha256": "43282305e6dc79d6c982edd0fd00bf48f7239469cb5f4686393e3a757762b50c",
+      "copied_sha256": "43282305e6dc79d6c982edd0fd00bf48f7239469cb5f4686393e3a757762b50c",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen3/fresh/protocol_gate.py",
+      "source": "outputs/dual_1000_20260917/snapshot_qwen3/protocol_gate.py",
+      "source_sha256": "d2ae1eb9f7ed0dd813cc77b93614e592e775c3c834cb4a32ca29e8d05c12b396",
+      "copied_sha256": "d2ae1eb9f7ed0dd813cc77b93614e592e775c3c834cb4a32ca29e8d05c12b396",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "configs/qwen3_manifest.json",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/manifest.json",
+      "source_sha256": "fa7464828da00ca8fa68e4d757f8812565ad5a84a5bb955aa523fbabff3dc3f8",
+      "copied_sha256": "fa7464828da00ca8fa68e4d757f8812565ad5a84a5bb955aa523fbabff3dc3f8",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen35/continuation/serve_teacher.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen35_format_r1/serve_teacher.py",
+      "source_sha256": "afbe0cbbfe930f78c660f1540d54a759e204b6e94ee99a34b9de70ee6f46d7ef",
+      "copied_sha256": "afbe0cbbfe930f78c660f1540d54a759e204b6e94ee99a34b9de70ee6f46d7ef",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen35/continuation/test_batch_validation.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen35_format_r1/test_batch_validation.py",
+      "source_sha256": "f2586a8cd7ff385f5c0c53f1876ee7e50ddcb74517e0b84a8f0b098afddac35b",
+      "copied_sha256": "f2586a8cd7ff385f5c0c53f1876ee7e50ddcb74517e0b84a8f0b098afddac35b",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen35/continuation/continuation.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen35_format_r1/continuation.py",
+      "source_sha256": "551e7e82121b0f58c471697ee997cbb89dd97fc58eaf42c68631bdc7430008a9",
+      "copied_sha256": "551e7e82121b0f58c471697ee997cbb89dd97fc58eaf42c68631bdc7430008a9",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen35/continuation/batch_validation.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen35_format_r1/batch_validation.py",
+      "source_sha256": "aa7801ff0dedc31f9166f1dbd23bc53463abade7f3de2578bdf3251c0f9e0b50",
+      "copied_sha256": "aa7801ff0dedc31f9166f1dbd23bc53463abade7f3de2578bdf3251c0f9e0b50",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen35/continuation/train.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen35_format_r1/train.py",
+      "source_sha256": "5f79326bdc96586578a7a32389840837600056914a9249114061026388494507",
+      "copied_sha256": "5f79326bdc96586578a7a32389840837600056914a9249114061026388494507",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen35/fresh/serve_teacher.py",
+      "source": "outputs/dual_1000_20260917/snapshot_qwen35_r4/serve_teacher.py",
+      "source_sha256": "afbe0cbbfe930f78c660f1540d54a759e204b6e94ee99a34b9de70ee6f46d7ef",
+      "copied_sha256": "afbe0cbbfe930f78c660f1540d54a759e204b6e94ee99a34b9de70ee6f46d7ef",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen35/fresh/test_batch_validation.py",
+      "source": "outputs/dual_1000_20260917/snapshot_qwen35_r4/test_batch_validation.py",
+      "source_sha256": "5fec1e3b35e2d5dd7823ec48e8f32e472e3222be0d122d28407646a19423da6e",
+      "copied_sha256": "5fec1e3b35e2d5dd7823ec48e8f32e472e3222be0d122d28407646a19423da6e",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen35/fresh/batch_validation.py",
+      "source": "outputs/dual_1000_20260917/snapshot_qwen35_r4/batch_validation.py",
+      "source_sha256": "d0c220160b2eefaf36412a486e3b0fb76bf6b96923b9a242f42d09f916f3bdbf",
+      "copied_sha256": "d0c220160b2eefaf36412a486e3b0fb76bf6b96923b9a242f42d09f916f3bdbf",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen35/fresh/train.py",
+      "source": "outputs/dual_1000_20260917/snapshot_qwen35_r4/train.py",
+      "source_sha256": "422e37ff007c432c7b65f648af66869d38063a13b0958ec2b232017785f14b7c",
+      "copied_sha256": "422e37ff007c432c7b65f648af66869d38063a13b0958ec2b232017785f14b7c",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen35/fresh/protocol_gate.py",
+      "source": "outputs/dual_1000_20260917/snapshot_qwen35_r4/protocol_gate.py",
+      "source_sha256": "d2ae1eb9f7ed0dd813cc77b93614e592e775c3c834cb4a32ca29e8d05c12b396",
+      "copied_sha256": "d2ae1eb9f7ed0dd813cc77b93614e592e775c3c834cb4a32ca29e8d05c12b396",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "configs/qwen35_manifest.json",
+      "source": "outputs/dual_3000_20260918/prepared_qwen35_format_r1/manifest.json",
+      "source_sha256": "d1f939cd36c84f664dacc425b3bb813456e613b2656b4c62b1237920c2991696",
+      "copied_sha256": "d1f939cd36c84f664dacc425b3bb813456e613b2656b4c62b1237920c2991696",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen3/continuation/test_continuation.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/test_continuation.py",
+      "source_sha256": "51ec750906aba6d36322eaa14fb0dfb5db975bda6a1755833f99df99e2b0badd",
+      "copied_sha256": "51ec750906aba6d36322eaa14fb0dfb5db975bda6a1755833f99df99e2b0badd",
+      "classification": "reuse_as_protocol"
+    },
+    {
+      "destination": "variants/qwen35/continuation/test_continuation.py",
+      "source": "outputs/dual_3000_20260918/prepared_qwen3/test_continuation.py",
+      "source_sha256": "51ec750906aba6d36322eaa14fb0dfb5db975bda6a1755833f99df99e2b0badd",
+      "copied_sha256": "51ec750906aba6d36322eaa14fb0dfb5db975bda6a1755833f99df99e2b0badd",
+      "classification": "reuse_as_protocol"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "1000 node gated online two-teacher training",
+  "protocol": {
+    "partner_model_id": "not_applicable_training_no_evaluation",
+    "environment_model_id": "official_sotopia_0.1.5_rules_no_llm",
+    "judge_model_id": "not_applicable_training_no_judge",
+    "judge_samples": 1,
+    "decoding_config": {
+      "rollout_seed_support": "explicit_seed_temperature_0.7"
+    }
+  },
+  "profile_split": {
+    "method": "hash_order80train20reserved_clean100_new_dialogues"
+  },
+  "repeats_per_scene": 1,
+  "inputs_sha256": "e9c0ce0314d586f6c20e1d6faabd0be05761ad5b572d5b15becf13e036868907",
+  "inputs_count": 100,
+  "manifest_sha256": "77cd8c2b6038e68d75954ff75f2f389d5e83bf5adad88b7e336260b26e15dfb9",
+  "training_partner_model_id": "Qwen/Qwen3-4B"
+}
