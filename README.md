@@ -6,6 +6,9 @@
 
 </div>
 
+> **HG 学校版训练代码（2026-09-21）**：[版本入口](budgetsi/README.md) · [当前参数与旧版差异](budgetsi/CURRENT_VERSION.md)。上游实现保留，项目训练接入层位于 `budgetsi/`。
+
+
 <div align="center" style="font-family: Arial, sans-serif;">
   <p>
     <a href="#news" style="text-decoration: none; font-weight: bold;">🎉 News</a> •
