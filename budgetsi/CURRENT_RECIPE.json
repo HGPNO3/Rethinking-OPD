@@ -1,0 +1,67 @@
+{
+  "purpose": "Current school training recipe for review; not a launch config or launch approval",
+  "source_commit": "6aa4b05",
+  "student": "Qwen/Qwen3.5-4B",
+  "teacher": "Qwen/Qwen3.5-27B",
+  "schema_version": "budgetsi_upstream_variants_online_v1",
+  "upstream_commit": "ac26e38d6f1572eb027597b48a9f4e01f6915ef8",
+  "school_p0": {
+    "version": "school_p0_v1",
+    "training_scenarios": 200,
+    "development_scenarios": 0,
+    "test_scenarios": 90,
+    "initialization": "fresh_base",
+    "formal_target_nodes": 3000,
+    "actor_recipe": "upstream_dynamic_token_mean_v1"
+  },
+  "target_nodes": 3000,
+  "dialogues_per_batch": 16,
+  "seed": 20360915,
+  "context": 40960,
+  "temperature": 1.0,
+  "teacher_temperature": 1.0,
+  "optimizer": {
+    "lr": 1e-05,
+    "weight_decay": 0.01,
+    "r": 32,
+    "alpha": 64,
+    "dropout": 0
+  },
+  "opd": {
+    "name": "sampled_token",
+    "priority": 4,
+    "k": 0,
+    "strategy": "only_stu",
+    "weight": "student_p"
+  },
+  "collection_parallel": {
+    "backend": "hf_seeded_batch_v1",
+    "dialogues": 16,
+    "batch_size": 8,
+    "wait_ms": 10
+  },
+  "diagnostics": {
+    "k": 16,
+    "max_actions": 4,
+    "early_steps": 30,
+    "later_interval": 5
+  },
+  "training_data": {
+    "path": "budgetsi/school_data/inputs_200.json",
+    "sha256": "f3c170a82978b4d2db0a9c52963eb4bc501f4785e380cb283fe908d5c7dda5aa"
+  },
+  "ig_target_mode": "verbatim_goal",
+  "candidate_teacher_context": "visible_history_and_original_student_action",
+  "arms": [
+    "same_context",
+    "reference_context"
+  ],
+  "actor": {
+    "use_dynamic_bsz": true,
+    "loss_agg_mode": "token-mean",
+    "ppo_max_token_len_per_gpu": 40960,
+    "optimizer_minibatch": "all admitted OPD nodes from one 16-dialogue collection, clipped to remaining quota",
+    "aggregation": "sum_g (answers_in_g / total_answers) * token_mean(loss_in_g)"
+  },
+  "runtime_forward_repair": "At T=1 only, skip identity logits division; preserve full forward tensor geometry and upstream loss/update bodies."
+}

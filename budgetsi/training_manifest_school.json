@@ -1,0 +1,36 @@
+{
+  "kind": "School P0 two K0 context arms, each3000 effective selected OPD nodes",
+  "protocol": {
+    "partner_model_id": "not_applicable_training_no_evaluation",
+    "environment_model_id": "official_sotopia_0.1.5_rules_no_llm",
+    "judge_model_id": "not_applicable_training_no_judge",
+    "judge_samples": 1,
+    "decoding_config": {
+      "rollout_seed_support": "explicit_seed_temperature_1.0"
+    }
+  },
+  "profile_split": {
+    "method": "all200_non_test_published_ordered_pairs_native_relationship_verified_scene_balanced_v1",
+    "training_scenarios": 200,
+    "development_scenarios": 0,
+    "test_scenarios": 90,
+    "ordered_training_configurations": 1129,
+    "test_inputs_sha256": "e561d40a821ec4538224ced8c3912648adec5a77b0c633f31fbce1b623d10774"
+  },
+  "repeats_per_scene": 1,
+  "inputs_sha256": "f3c170a82978b4d2db0a9c52963eb4bc501f4785e380cb283fe908d5c7dda5aa",
+  "inputs_count": 1129,
+  "training_partner_model_id": "Qwen/Qwen3.5-4B",
+  "school_p0": {
+    "version": "school_p0_v1",
+    "training_scenarios": 200,
+    "development_scenarios": 0,
+    "test_scenarios": 90,
+    "initialization": "fresh_base",
+    "formal_target_nodes": 3000,
+    "actor_recipe": "upstream_dynamic_token_mean_v1"
+  },
+  "repeat_semantics": "repeats_per_scene is a gate metadata field, not an online training epoch limit; ordered pairs rotate under the3000-effective-node budget",
+  "authorization_summary": "HG explicitly approved the two school P0 sampled-token K0 context arms, all200 non-test scenarios with no dev split, fresh original Qwen3.5-4B taught by Qwen3.5-27B, exactly3000 effective OPD nodes per formal arm (not3000 updates), and learning rate1e-5. Existing selection/role boundary remains; school execution uses the selected upstream actor recipe at temperature1. W&B scalar/config destination was explicitly authorized; no raw dialogues or credentials are uploaded.",
+  "manifest_sha256": "86e557b9102f4bba94ef06f707ce5deb038dddfc9c9250d1947deeb202071bb9"
+}
